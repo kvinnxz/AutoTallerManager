@@ -1,7 +1,7 @@
 using Application.Abstractions.Repositories;
-
+ 
 namespace Application.Abstractions;
-
+ 
 public interface IUnitOfWork : IDisposable
 {
     IClienteRepository       Clientes        { get; }
@@ -12,7 +12,8 @@ public interface IUnitOfWork : IDisposable
     IUsuarioRepository       Usuarios        { get; }
     IRolRepository           Roles           { get; }
     IRefreshTokenRepository  RefreshTokens   { get; }
-
+    IUsuarioRolRepository    UsuarioRoles    { get; }
+ 
     Task<int> SaveChangesAsync(CancellationToken ct = default);
     Task BeginTransactionAsync(CancellationToken ct = default);
     Task CommitTransactionAsync(CancellationToken ct = default);

@@ -8,6 +8,7 @@ namespace Infrastructure.Repositories;
 
 public class GenericRepository<T>(AppDbContext db) : IGenericRepository<T> where T : BaseEntity
 {
+    protected readonly AppDbContext Db = db;
     protected readonly DbSet<T> Set = db.Set<T>();
 
     public async Task<T?> GetByIdAsync(int id, CancellationToken ct = default, params string[] includes)

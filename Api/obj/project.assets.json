@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net10.0": {
       "AspNetCoreRateLimit/5.0.0": {
@@ -2485,19 +2485,19 @@
     ]
   },
   "packageFolders": {
-    "/home/camper/.nuget/packages/": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/camper/AutoTallerManager/Api/Api.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\AutoTallerManager\\api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "/home/camper/AutoTallerManager/Api/Api.csproj",
-      "packagesPath": "/home/camper/.nuget/packages/",
-      "outputPath": "/home/camper/AutoTallerManager/Api/obj/",
+      "projectPath": "C:\\Users\\pc\\Desktop\\AutoTallerManager\\api\\Api.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\AutoTallerManager\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/camper/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -2507,14 +2507,13 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/camper/AutoTallerManager/Application/Application.csproj": {
-              "projectPath": "/home/camper/AutoTallerManager/Application/Application.csproj"
+            "C:\\Users\\pc\\Desktop\\AutoTallerManager\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\AutoTallerManager\\Application\\Application.csproj"
             },
-            "/home/camper/AutoTallerManager/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/home/camper/AutoTallerManager/Infrastructure/Infrastructure.csproj"
+            "C:\\Users\\pc\\Desktop\\AutoTallerManager\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\AutoTallerManager\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -2529,11 +2528,10 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "AspNetCoreRateLimit": {
@@ -2584,7 +2582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.300/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

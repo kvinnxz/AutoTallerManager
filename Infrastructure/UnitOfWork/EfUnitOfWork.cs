@@ -19,6 +19,7 @@ public class EfUnitOfWork(AppDbContext db) : IUnitOfWork
     public IUsuarioRepository       Usuarios        { get; } = new UsuarioRepository(db);
     public IRolRepository           Roles           { get; } = new RolRepository(db);
     public IRefreshTokenRepository  RefreshTokens   { get; } = new RefreshTokenRepository(db);
+    public IUsuarioRolRepository    UsuarioRoles    { get; } = new UsuarioRolRepository(db);
 
     public Task<int>  SaveChangesAsync(CancellationToken ct) => db.SaveChangesAsync(ct);
 

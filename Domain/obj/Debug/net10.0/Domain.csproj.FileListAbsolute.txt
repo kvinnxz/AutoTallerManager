@@ -9,3 +9,15 @@
 /home/camper/AutoTallerManager/Domain/obj/Debug/net10.0/refint/Domain.dll
 /home/camper/AutoTallerManager/Domain/obj/Debug/net10.0/Domain.pdb
 /home/camper/AutoTallerManager/Domain/obj/Debug/net10.0/ref/Domain.dll
+C:\Users\pc\Desktop\AutoTallerManager\Domain\bin\Debug\net10.0\Domain.deps.json
+C:\Users\pc\Desktop\AutoTallerManager\Domain\bin\Debug\net10.0\Domain.dll
+C:\Users\pc\Desktop\AutoTallerManager\Domain\bin\Debug\net10.0\Domain.pdb
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.AssemblyInfo.cs
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.sourcelink.json
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.dll
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\refint\Domain.dll
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\Domain.pdb
+C:\Users\pc\Desktop\AutoTallerManager\Domain\obj\Debug\net10.0\ref\Domain.dll

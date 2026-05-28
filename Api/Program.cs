@@ -8,6 +8,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ── Configurar Kestrel para desarrollo ──────────────────────────────
+builder.WebHost.ConfigureKestrel(options =>
+{
+    if (builder.Environment.IsDevelopment())
+    {
+        options.ListenLocalhost(5000); // HTTP
+        options.ListenLocalhost(5001, listenOptions => listenOptions.UseHttps()); // HTTPS
+    }
+});
+
 // ── Servicios ────────────────────────────────────────────────────────
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -48,8 +58,11 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty;
     });
 }
-
-app.UseHttpsRedirection();
+else
+{
+    app.UseHsts();
+    app.UseHttpsRedirection();
+}
 app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();

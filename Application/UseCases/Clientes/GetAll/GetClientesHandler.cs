@@ -11,13 +11,22 @@ public sealed class GetClientesHandler(IUnitOfWork uow)
     {
         var (items, total) = await uow.Clientes.GetPagedAsync(
             qry.Page, qry.PageSize,
-            filter:   c => c.IsActive && (qry.Nombre == null || c.Nombre.Contains(qry.Nombre)),
-            includes: ["Vehiculos"],
-            ct:       ct);
+            filter: c => c.IsActive && (qry.Nombre == null || c.Nombre.Contains(qry.Nombre)),
+            ct: ct);
 
-        var results = items.Select(c => new ClienteResult(
-            c.Id, c.Nombre, c.TelefonoValue, c.CorreoValue,
-            c.CreatedAt, c.Vehiculos.Count));
+        // Cargar vehículos por separado para evitar el bug con include + paginación
+        var results = new List<ClienteResult>();
+        foreach (var c in items)
+        {
+            var vehiculos = await uow.Vehiculos.GetPagedAsync(
+                1, int.MaxValue,
+                filter: v => v.ClienteId == c.Id && v.IsActive,
+                ct: ct);
+
+            results.Add(new ClienteResult(
+                c.Id, c.Nombre, c.TelefonoValue, c.CorreoValue,
+                c.CreatedAt, vehiculos.Total));
+        }
 
         return Result<PagedResult<ClienteResult>>.Success(
             new PagedResult<ClienteResult>(results, total, qry.Page, qry.PageSize));

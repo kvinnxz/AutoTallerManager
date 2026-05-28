@@ -10,4 +10,10 @@ public class RolRepository(AppDbContext db)
 {
     public Task<Rol?> GetByNombreAsync(string nombre, CancellationToken ct)
         => Set.FirstOrDefaultAsync(r => r.Nombre == nombre, ct);
+
+    public async Task AsignarRolAsync(int usuarioId, int rolId, CancellationToken ct = default)
+    {
+        var usuarioRol = new UsuarioRol { UsuarioId = usuarioId, RolId = rolId };
+        await Db.UsuarioRoles.AddAsync(usuarioRol, ct);
+    }
 }
